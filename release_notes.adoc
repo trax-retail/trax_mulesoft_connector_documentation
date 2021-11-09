@@ -1,0 +1,25 @@
+= Trax Connecter Release Notes - Mule 4
+
+Anypoint Connector for Trax gives you access to the Trax platform. This connector exposes select operations of the Trax API
+to enable working with Trax within Salesforce.
+
+== 1.0.0
+=== Nov. 9, 2021
+*Compatibility*
+
+The Anypoint Connector for Trax is compatible with these software versions
+[%header,cols="20s,20a"]
+|===
+| Software | Version
+| Mule | 4.3
+|Anypoint Studio| 7.11
+| OpenJDK | 8
+| Trax API | 4.1
+|===
+
+*Features*
+
+New Connector
+
+For a list of supported configurations and operations, see the Trax Connector Reference Guide
+
