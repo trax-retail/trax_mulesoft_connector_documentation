@@ -1,0 +1,664 @@
+= Trax Connecter 1.0 Reference - Mule 4
+
+Support Category: https://www.mulesoft.com/legal/versioning-back-support-policy#anypoint-connectors[Certified]
+
+Anypoint Connector for Trax enables the integration of data from the Trax public facing API
+
+== Configurations
+---
+=== Default Configuration
+
+
+Default configuration for Integrating with the Trax API.
+
+
+==== Parameters
+[%header,cols="20s,20a,35a,20a,5a"]
+|===
+| Name | Type | Description | Default Value | Required
+|Name | String | The name for this configuration. Connectors reference the configuration with this name. | | x
+| Base Uri | String
+| The Base URI for the Trax Api. | | x
+| Authorization | String |  The API access key used for server authorization |  | x
+|===
+
+== Available Actions
+
+[[get-audit-cycle-sets]]
+=== Get Audit Cycle Sets
+`<trax-api-connector-mule-4:entity-controller-get-audit-cycle-sets>`
+
+Retrieves a list of Audit cycle sets.
+
+==== Parameters
+[%header,cols="20s,20a,35a,20a,5a"]
+|===
+| Name | Type | Description | Default Value | Required
+| Configuration | String | The name of the configuration to use. | | x
+| Project Name | String |  Name of the project to run against. |  | x
+| Page | Number |  Page number to retrieve for pagination purposes. |  |
+| Per Page | Number | Number of results to return per page |  |
+|===
+
+==== Output
+[%autowidth.spread]
+
+Metadata
+|===
+| Name | Type | Description
+| page | Number | Current page number.
+| per_page | Number |  Number of results per page.
+| page_count | Number |  Total number of pages available.
+| total_count | Number | Total number of available results
+| links | Object | see below
+|===
+
+Links
+|===
+| Name | Type | Description
+| self | String | Link to current page number.
+| first | String |  Link to first page.
+| previous | String |  Link to previous page.
+| next | String | Link to next page
+| last | String | Link to last page
+|===
+[%header,cols="20s,20a,35a]
+
+Audit Cycle Sets
+
+|===
+| Name | Type | Description
+|pk | number | Audit Cycle Set identifier.
+| name | String | Audit Cycle Set name
+|===
+
+
+[[get-branches]]
+=== Get Branches
+`<trax-api-connector-mule-4:entity-controller-get-branches>`
+
+Retrieves a list of retailer branches.
+
+==== Parameters
+[%header,cols="20s,20a,35a,20a,5a"]
+|===
+| Name | Type | Description | Default Value | Required
+| Configuration | String | The name of the configuration to use. | | x
+| Project Name | String |  Name of the project to run against. |  | x
+| Page | Number |  Page number to retrieve for pagination purposes. |  |
+| Per Page | Number | Number of results to return per page |  |
+|===
+
+==== Output
+[%autowidth.spread]
+
+Metadata
+|===
+| Name | Type | Description
+| page | Number | Current page number.
+| per_page | Number |  Number of results per page.
+| page_count | Number |  Total number of pages available.
+| total_count | Number | Total number of available results
+| links | Object | see below
+|===
+
+Links
+|===
+| Name | Type | Description
+| self | String | Link to current page number.
+| first | String |  Link to first page.
+| previous | String |  Link to previous page.
+| next | String | Link to next page
+| last | String | Link to last page
+|===
+[%header,cols="20s,20a,35a]
+
+Branches
+
+|===
+| Name | Type | Description
+| branch_name | String | Branch name
+| branch_code | String | Branch code
+| is_deleted | String | branch deletion status
+|===
+
+[[get-districts]]
+=== Get Districts
+`<trax-api-connector-mule-4:entity-controller-get-districts>`
+
+Retrieves a list of region districts.
+
+==== Parameters
+[%header,cols="20s,20a,35a,20a,5a"]
+|===
+| Name | Type | Description | Default Value | Required
+| Configuration | String | The name of the configuration to use. | | x
+| Project Name | String |  Name of the project to run against. |  | x
+| Page | Number |  Page number to retrieve for pagination purposes. |  |
+| Per Page | Number | Number of results to return per page |  |
+|===
+
+==== Output
+[%autowidth.spread]
+
+Metadata
+|===
+| Name | Type | Description
+| page | Number | Current page number.
+| per_page | Number |  Number of results per page.
+| page_count | Number |  Total number of pages available.
+| total_count | Number | Total number of available results
+| links | Object | see below
+|===
+
+Links
+|===
+| Name | Type | Description
+| self | String | Link to current page number.
+| first | String |  Link to first page.
+| previous | String |  Link to previous page.
+| next | String | Link to next page
+| last | String | Link to last page
+|===
+[%header,cols="20s,20a,35a]
+
+Districts
+
+|===
+| Name | Type | Description
+| district_name | String | District name
+| district_code | String | District code
+| is_deleted | String | branch deletion status
+|===
+
+[[get-planograms]]
+=== Get Planograms
+`<trax-api-connector-mule-4:entity-controller-get-planograms>`
+
+Retrieves a list of shelf planograms.
+
+==== Parameters
+[%header,cols="20s,20a,35a,20a,5a"]
+|===
+| Name | Type | Description | Default Value | Required
+| Configuration | String | The name of the configuration to use. | | x
+| Project Name | String |  Name of the project to run against. |  | x
+| Page | Number |  Page number to retrieve for pagination purposes. |  |
+| Per Page | Number | Number of results to return per page |  |
+|===
+
+==== Output
+[%autowidth.spread]
+
+Metadata
+|===
+| Name | Type | Description
+| page | Number | Current page number.
+| per_page | Number |  Number of results per page.
+| page_count | Number |  Total number of pages available.
+| total_count | Number | Total number of available results
+| links | Object | see below
+|===
+
+Links
+|===
+| Name | Type | Description
+| self | String | Link to current page number.
+| first | String |  Link to first page.
+| previous | String |  Link to previous page.
+| next | String | Link to next page
+| last | String | Link to last page
+|===
+[%header,cols="20s,20a,35a]
+
+Planograms
+
+|===
+| Name | Type | Description
+| planogram_image_url | String | Image url for the planogram
+| planogram_id | number | Planogram Identifier
+| name | String | Planogram Name
+| valid_from | String | Planogram valid from date
+| valid_to | String | Planogram Valid to date
+| last_modified | String | Last modification date
+| planogram_code | String | Unique planogram identifier
+| planogram_status | String | Planogram activation status
+|===
+
+[[get-products]]
+=== Get Products
+`<trax-api-connector-mule-4:entity-controller-get-products>`
+
+Retrieves a list of project products.
+
+==== Parameters
+[%header,cols="20s,20a,35a,20a,5a"]
+|===
+| Name | Type | Description | Default Value | Required
+| Configuration | String | The name of the configuration to use. | | x
+| Project Name | String |  Name of the project to run against. |  | x
+| Page | Number |  Page number to retrieve for pagination purposes. |  |
+| Per Page | Number | Number of results to return per page |  |
+|===
+
+==== Output
+[%autowidth.spread]
+
+Metadata
+|===
+| Name | Type | Description
+| page | Number | Current page number.
+| per_page | Number |  Number of results per page.
+| page_count | Number |  Total number of pages available.
+| total_count | Number | Total number of available results
+| links | Object | see below
+|===
+
+Links
+|===
+| Name | Type | Description
+| self | String | Link to current page number.
+| first | String |  Link to first page.
+| previous | String |  Link to previous page.
+| next | String | Link to next page
+| last | String | Link to last page
+|===
+[%header,cols="20s,20a,35a]
+
+Products
+
+|===
+| Name | Type | Description
+| pk | Number | Product identifier
+| alt_code | String | The product's alt code
+| product_name | String | Product name
+| product_uuid | String | Unique product identifier
+| product_local_name | String | Unique product name in the project's local language
+| product_short_name | String | Product's abbreviated name to be displayed in Trax reports/websites.
+| product_item_code | String | Client product code Provided by the Customer
+| product_client_code	| String | The product's EAN or UPC code
+| brand_name | String | Unique brand name related to the product
+| brand_local_name | String | Unique brand name related to the product in the project's local language
+| manufacturer_name | String | Unique manufacturer name related to the brand
+| manufacturer_local_name| String | Unique manufacturer name related to the brand in the project's local language
+| is_deleted| Boolean | Product deletion status
+| is_active | Boolean | Product activation status
+| category_name | String | Unique category name related to the product
+| category_local_name | String | Unique category name related to the product in the project's local language
+| subcategory_name | String | Unique subcategory name related to the product
+| subcategory_local_name | String | Unique subcategory name related to the product in the project's local language
+| container_type | Number | The product's container type
+| size| String | The product size
+| unit_measurement | String | The product's size measurements
+| number_of_subpackages	| Number | The product's number of subpackages
+| units	| Number | The product's number of units
+| discovered_by_brand_watch	| Boolean | Indicates whether the product has been discovered by Trax Brand Watch
+| substitution_product_lead	| String | Trax product uuid of the substitution lead product
+| images | Object | A list of product images & their face count
+| product_additional_attributes | Object | A list of product attributes
+| alternative_designs| Object | A list of the product's alternative designs
+|===
+
+
+[[get-routes]]
+=== Get Routes
+`<trax-api-connector-mule-4:entity-controller-get-routes>`
+
+Retrieves a list of country regions.
+
+==== Parameters
+[%header,cols="20s,20a,35a,20a,5a"]
+|===
+| Name | Type | Description | Default Value | Required
+| Configuration | String | The name of the configuration to use. | | x
+| Project Name | String |  Name of the project to run against. |  | x
+| Page | Number |  Page number to retrieve for pagination purposes. |  |
+| Per Page | Number | Number of results to return per page |  |
+|===
+
+==== Output
+[%autowidth.spread]
+
+Metadata
+|===
+| Name | Type | Description
+| page | Number | Current page number.
+| per_page | Number |  Number of results per page.
+| page_count | Number |  Total number of pages available.
+| total_count | Number | Total number of available results
+| links | Object | see below
+|===
+
+Links
+|===
+| Name | Type | Description
+| self | String | Link to current page number.
+| first | String |  Link to first page.
+| previous | String |  Link to previous page.
+| next | String | Link to next page
+| last | String | Link to last page
+|===
+[%header,cols="20s,20a,35a]
+
+Regions
+
+|===
+| Name | Type | Description
+| name| String | Name of the route
+| description | String | A short description
+| external_route_id| String | The client's Route unique identifier
+| entities| String | An Object of entities that is linked to the Route.
+|===
+
+Entities
+|===
+| Name | Type | Description
+| stores| Array | List of store numbers Maximum 500 stores per route
+| users | Array | List of users login name
+| cycles| Array | List of cycles linked to the route
+|===
+
+[[get-states]]
+=== Get States
+`<trax-api-connector-mule-4:entity-controller-get-states>`
+
+Retrieves a list of country states.
+
+==== Parameters
+[%header,cols="20s,20a,35a,20a,5a"]
+|===
+| Name | Type | Description | Default Value | Required
+| Configuration | String | The name of the configuration to use. | | x
+| Project Name | String |  Name of the project to run against. |  | x
+| Page | Number |  Page number to retrieve for pagination purposes. |  |
+| Per Page | Number | Number of results to return per page |  |
+|===
+
+==== Output
+[%autowidth.spread]
+
+Metadata
+|===
+| Name | Type | Description
+| page | Number | Current page number.
+| per_page | Number |  Number of results per page.
+| page_count | Number |  Total number of pages available.
+| total_count | Number | Total number of available results
+| links | Object | see below
+|===
+
+Links
+|===
+| Name | Type | Description
+| self | String | Link to current page number.
+| first | String |  Link to first page.
+| previous | String |  Link to previous page.
+| next | String | Link to next page
+| last | String | Link to last page
+|===
+[%header,cols="20s,20a,35a]
+
+States
+
+|===
+| Name | Type | Description
+| state_name | String | State name
+(State names that have been configured in coordination with Trax implementation team)
+| state_code | String | State code
+(State code names that have been configured in coordination with Trax implementation team)
+|===
+
+[[get-store-types]]
+=== Get Store Types
+`<trax-api-connector-mule-4:entity-controller-get-store-types>`
+
+Retrieves a list of store types.
+
+==== Parameters
+[%header,cols="20s,20a,35a,20a,5a"]
+|===
+| Name | Type | Description | Default Value | Required
+| Configuration | String | The name of the configuration to use. | | x
+| Project Name | String |  Name of the project to run against. |  | x
+| Page | Number |  Page number to retrieve for pagination purposes. |  |
+| Per Page | Number | Number of results to return per page |  |
+|===
+
+==== Output
+[%autowidth.spread]
+
+Metadata
+|===
+| Name | Type | Description
+| page | Number | Current page number.
+| per_page | Number |  Number of results per page.
+| page_count | Number |  Total number of pages available.
+| total_count | Number | Total number of available results
+| links | Object | see below
+|===
+
+Links
+|===
+| Name | Type | Description
+| self | String | Link to current page number.
+| first | String |  Link to first page.
+| previous | String |  Link to previous page.
+| next | String | Link to next page
+| last | String | Link to last page
+|===
+[%header,cols="20s,20a,35a]
+
+States
+
+|===
+| Name | Type | Description
+| store_type_name | String | Store Type name
+(Store Type names that have been configured in coordination with Trax implementation team)
+|===
+
+[[get-stores]]
+=== Get Stores
+`<trax-api-connector-mule-4:entity-controller-get-stores>`
+
+Retrieves a list of stores.
+
+==== Parameters
+[%header,cols="20s,20a,35a,20a,5a"]
+|===
+| Name | Type | Description | Default Value | Required
+| Configuration | String | The name of the configuration to use. | | x
+| Project Name | String |  Name of the project to run against. |  | x
+| Page | Number |  Page number to retrieve for pagination purposes. |  |
+| Per Page | Number | Number of results to return per page |  |
+|===
+
+==== Output
+[%autowidth.spread]
+
+Metadata
+|===
+| Name | Type | Description
+| page | Number | Current page number.
+| per_page | Number |  Number of results per page.
+| page_count | Number |  Total number of pages available.
+| total_count | Number | Total number of available results
+| links | Object | see below
+|===
+
+Links
+|===
+| Name | Type | Description
+| self | String | Link to current page number.
+| first | String |  Link to first page.
+| previous | String |  Link to previous page.
+| next | String | Link to next page
+| last | String | Link to last page
+|===
+[%header,cols="20s,20a,35a]
+
+Stores
+
+|===
+| Name | Type | Description
+| store_number | String | The client's store unique identifier
+| store_name | String | Name of the store
+| store_display_name | String | A display (short-version) name of the store for report use (for Trax output solutions).
+| store_type_name | String | Store type
+(Store types that have been configured in coordination with Trax implementation team)
+| region_name | String | Region Name
+(Regions that have been configured in coordination with Trax implementation team)
+| district_name | String | District Name
+(Districts that have been configured in coordination with Trax implementation team)
+| branch_name | String | Branch Name
+(Branches that have been configured in coordination with Trax implementation team)
+| retailer_name | String | Retailer Name
+(Retailers that have been configured in coordination with Trax implementation team)
+| state_code | String | ISO code for a state or province
+(State codes that have been configured in coordination with Trax implementation team)
+| street | String | Address street info
+| city | String | Address info
+| postal_code | String | Address info
+| latitude | Number(Float) | GPS latitude coordinate (in degrees)
+| longitude | Number(Float) | GPS longitude coordinate (in degrees)
+| is_active | Boolean | Indicates whether the store is active or has been deactivated
+| manager_name | String | Name of the store's manager (or another contact person for the store)
+| manager_email | String | Email of the store's manager
+| manager_phone | String |Phone number of the store's manager
+| last_update_time | Number (Epoch Unix Timestamp) |The store's last update time in Epoch Unix Time timestamp
+|additional_attributes | Object | In addition to the attributes above, it is possible to add additional attributes for stores
+(currently, Trax supports up to 30 name-value pairs)
+|===
+
+Additional Attributes
+In addition to the attributes above, it is possible to add additional attributes for stores (currently, Trax supports up to 30 name-value pairs).
+[%header, cols="20s,20a, 35a"]
+|===
+| Name | Type | Description
+| <key> | String | Attribute name as coordinated with Trax implementation
+Currently limited to 'additional_attribute_n' where n is 1-30.
+The values will correspond to additional_attribute_n.
+e.g. additional_attribute_1
+| <value> | String | Attribute name as coordinated with Trax implementation
+|===
+
+[[get-tasks]]
+=== Get Tasks
+`<trax-api-connector-mule-4:entity-controller-get-tasks>`
+
+Retrieves a list of Tasks.
+
+==== Parameters
+[%header,cols="20s,20a,35a,20a,5a"]
+|===
+| Name | Type | Description | Default Value | Required
+| Configuration | String | The name of the configuration to use. | | x
+| Project Name | String |  Name of the project to run against. |  | x
+| Page | Number |  Page number to retrieve for pagination purposes. |  |
+| Per Page | Number | Number of results to return per page |  |
+|===
+
+==== Output
+[%autowidth.spread]
+
+Metadata
+|===
+| Name | Type | Description
+| page | Number | Current page number.
+| per_page | Number |  Number of results per page.
+| page_count | Number |  Total number of pages available.
+| total_count | Number | Total number of available results
+| links | Object | see below
+|===
+
+Links
+|===
+| Name | Type | Description
+| self | String | Link to current page number.
+| first | String |  Link to first page.
+| previous | String |  Link to previous page.
+| next | String | Link to next page
+| last | String | Link to last page
+|===
+[%header,cols="20s,20a,35a]
+
+Tasks
+
+|===
+| Name | Type | Description
+| task_name | String | Task name
+(Task names that have been configured in coordination with Trax implementation team)
+| task_code | String | Task code
+(Task codes that have been configured in coordination with Trax implementation team)
+| task_uuid | String | Unique identifier for the task
+| template_group | String |The template's template group.
+| fixture | String |A type of display in the store such as a cooler, main shelf, or secondary display.
+
+
+|===
+
+[[get-users]]
+=== Get Users
+`<trax-api-connector-mule-4:entity-controller-get-users>`
+
+Retrieves a list of users.
+
+==== Parameters
+[%header,cols="20s,20a,35a,20a,5a"]
+|===
+| Name | Type | Description | Default Value | Required
+| Configuration | String | The name of the configuration to use. | | x
+| Project Name | String |  Name of the project to run against. |  | x
+| Page | Number |  Page number to retrieve for pagination purposes. |  |
+| Per Page | Number | Number of results to return per page |  |
+|===
+
+==== Output
+[%autowidth.spread]
+
+Metadata
+|===
+| Name | Type | Description
+| page | Number | Current page number.
+| per_page | Number |  Number of results per page.
+| page_count | Number |  Total number of pages available.
+| total_count | Number | Total number of available results
+| links | Object | see below
+|===
+
+Links
+|===
+| Name | Type | Description
+| self | String | Link to current page number.
+| first | String |  Link to first page.
+| previous | String |  Link to previous page.
+| next | String | Link to next page
+| last | String | Link to last page
+|===
+[%header,cols="20s,20a,35a]
+
+Tasks
+
+|===
+| Name | Type | Description
+| login_name | String | Users login name
+| email_address | String | A valid, working email that is universally unique
+| mobile_number | String | A valid, working, mobile number that is universally unique and in use,e.g +447813988839
+| first_name | String | Users first name
+| last_name | String | Users last name
+| supervisors_username | String | The username (email/telephone) of the supervisor of the user
+| operational_role | String | The user's operational role. The optional values are: Sales Rep, Auditor, Supervisor, Manager
+|entities| Object[] | List of entities that are linked to the user
+|===
+
+entities
+[%header,cols="20s,20a,35a]
+|===
+|Name|Type|Description
+|routes| Array|List of external_route_id that are linked to the user
+|stores| Array|List of store_numbers that are linked to the user
+|===
+
+== See Also
+
+* xref:connectors::introduction/introduction-to-anypoint-connectors.adoc[Introduction to Anypoint Connectors]
+* https://help.mulesoft.com[MuleSoft Help Center]
