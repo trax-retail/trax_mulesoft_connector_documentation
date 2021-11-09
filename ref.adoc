@@ -99,7 +99,7 @@ Metadata
 | per_page | Number |  Number of results per page.
 | page_count | Number |  Total number of pages available.
 | total_count | Number | Total number of available results
-| links | Object | see below
+| links | Object | See below
 |===
 
 Links
@@ -119,7 +119,7 @@ Branches
 | Name | Type | Description
 | branch_name | String | Branch name
 | branch_code | String | Branch code
-| is_deleted | String | branch deletion status
+| is_deleted | String | Branch deletion status
 |===
 
 [[get-districts]]
@@ -148,7 +148,7 @@ Metadata
 | per_page | Number |  Number of results per page.
 | page_count | Number |  Total number of pages available.
 | total_count | Number | Total number of available results
-| links | Object | see below
+| links | Object | See below
 |===
 
 Links
@@ -168,7 +168,7 @@ Districts
 | Name | Type | Description
 | district_name | String | District name
 | district_code | String | District code
-| is_deleted | String | branch deletion status
+| is_deleted | String | Branch deletion status
 |===
 
 [[get-planograms]]
@@ -197,7 +197,7 @@ Metadata
 | per_page | Number |  Number of results per page.
 | page_count | Number |  Total number of pages available.
 | total_count | Number | Total number of available results
-| links | Object | see below
+| links | Object | See below
 |===
 
 Links
@@ -251,7 +251,7 @@ Metadata
 | per_page | Number |  Number of results per page.
 | page_count | Number |  Total number of pages available.
 | total_count | Number | Total number of available results
-| links | Object | see below
+| links | Object | See below
 |===
 
 Links
@@ -326,7 +326,7 @@ Metadata
 | per_page | Number |  Number of results per page.
 | page_count | Number |  Total number of pages available.
 | total_count | Number | Total number of available results
-| links | Object | see below
+| links | Object | See below
 |===
 
 Links
@@ -384,7 +384,7 @@ Metadata
 | per_page | Number |  Number of results per page.
 | page_count | Number |  Total number of pages available.
 | total_count | Number | Total number of available results
-| links | Object | see below
+| links | Object | See below
 |===
 
 Links
@@ -434,7 +434,7 @@ Metadata
 | per_page | Number |  Number of results per page.
 | page_count | Number |  Total number of pages available.
 | total_count | Number | Total number of available results
-| links | Object | see below
+| links | Object | See below
 |===
 
 Links
@@ -482,7 +482,7 @@ Metadata
 | per_page | Number |  Number of results per page.
 | page_count | Number |  Total number of pages available.
 | total_count | Number | Total number of available results
-| links | Object | see below
+| links | Object | See below
 |===
 
 Links
@@ -530,6 +530,7 @@ Stores
 |===
 
 Additional Attributes
+
 In addition to the attributes above, it is possible to add additional attributes for stores (currently, Trax supports up to 30 name-value pairs).
 [%header, cols="20s,20a, 35a"]
 |===
@@ -567,7 +568,7 @@ Metadata
 | per_page | Number |  Number of results per page.
 | page_count | Number |  Total number of pages available.
 | total_count | Number | Total number of available results
-| links | Object | see below
+| links | Object | See below
 |===
 
 Links
@@ -622,7 +623,7 @@ Metadata
 | per_page | Number |  Number of results per page.
 | page_count | Number |  Total number of pages available.
 | total_count | Number | Total number of available results
-| links | Object | see below
+| links | Object | See below
 |===
 
 Links
