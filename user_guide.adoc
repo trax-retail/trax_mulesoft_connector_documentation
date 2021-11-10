@@ -1,0 +1,57 @@
+= Trax Connecter 1.0  - Mule 4
+
+Support Category: https://www.mulesoft.com/legal/versioning-back-support-policy#anypoint-connectors[Certified]
+
+*Overview*
+
+The Trax Connector enables Salesforce customers to integrate shelf & merchandising data from Trax into their existing solutions.
+
+Trax connector enables you to connect to select endpoints of Trax’s APIs, and exposes endpoints for accessing Trax data.
+
+This connector requires being a customer of Trax Retail, please contact Trax directly to evaluate or use this connector (info@traxretail.com)
+
+*Prerequisites*
+
+To use this connector, you must be familiar with:
+
+- Trax Connector’s API
+
+- Anypoint connectors
+
+- Mule runtime engine (Mule)
+
+- Creating a Mule app using Anypoint Studio
+
+*Before creating an app you must have*
+
+- Credentials to access Trax resources
+
+- A working knowledge of the Trax product and the data supported
+
+- Knowledge of how to create a Mule app using Anypoint Studio
+
+*Authentication*
+
+
+Trax connector uses an API Access key for authentication. Contact your Trax representative to receive the key for your project
+
+
+*Limitations*
+
+Trax Connector does not expose all possible operations of the Trax API
+
+
+*Next Step*
+After you complete the prerequisites, you are ready to create an app and configure the connector using AnypointStudio
+
+*See Also*
+
+https://docs.mulesoft.com/connectors/introduction/introduction-to-anypoint-connectors[Introduction to Anypoint Connectors]
+
+https://docs.mulesoft.com/connectors/introduction/intro-use-exchange[Use Exchange to Discover Connectors, Templates, and Examples]
+
+Trax Connector Api
+
+Trax Connector Release notes
+
+Trax connector in Exchange
