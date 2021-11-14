@@ -231,7 +231,6 @@ Products
 | number_of_subpackages	| Number | The product's number of subpackages
 | units	| Number | The product's number of units
 | discovered_by_brand_watch	| Boolean | Indicates whether the product has been discovered by Trax Brand Watch
-| substitution_product_lead	| String | Trax product uuid of the substitution lead product
 | category_attribute_1| String | Custom attribute 1
 | category_attribute_2| String | Custom attribute 2
 | category_attribute_3| String | Custom attribute 3
@@ -430,12 +429,12 @@ Stores
 
 Additional Attributes
 
-In addition to the attributes above, it is possible to add additional attributes for stores (currently, Trax supports up to 30 name-value pairs).
+In addition to the attributes above, it is possible to add additional attributes for stores (currently, Trax supports up to 45 name-value pairs).
 [%header, cols="20s,20a, 35a"]
 |===
 | Name | Type | Description
 | <key> | String | Attribute name as coordinated with Trax implementation
-Currently limited to 'additional_attribute_n' where n is 1-30.
+Currently limited to 'additional_attribute_n' where n is 1-45.
 The values will correspond to additional_attribute_n.
 e.g. additional_attribute_1
 | <value> | String | Attribute name as coordinated with Trax implementation
