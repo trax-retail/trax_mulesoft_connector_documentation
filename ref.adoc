@@ -13,13 +13,15 @@ Default configuration for Integrating with the Trax API.
 
 
 ==== Parameters
-[%header,cols="20s,20a,35a,20a,5a"]
+[%header,cols="20s,20a,20a,20a,20a,25a"]
 |===
-| Name | Type | Description | Default Value | Required
-|Name | String | The name for this configuration. Connectors reference the configuration with this name. | | x
+| Name | Type | Description | Default Value | Required | Example
+|Name | String | The name for this configuration. Connectors reference the configuration with this name. | | x | "Trax API connector configuration"
 | Base Uri | String
-| The Base URI for the Trax Api. | | x
-| Authorization | String |  The API access key used for server authorization |  | x
+| The Base URI for the Trax Api. | | x | One of:
+** https://services.traxretail.com
+** https://gservices.traxretail.com
+| Authorization | String |  The API access key used for server authorization prefixed with "Auth-Token" |  | x | Auth-Token 2Duv6qwtZAVtaltC7lG2ZarFEMO3tVblWGk3HMwsMMb2axdCzxsd6zk9w7D8ng6JR7t0e0z8cri2
 |===
 
 == Available Actions
@@ -42,7 +44,7 @@ Retrieves a list of Audit cycle sets.
 
 ==== Output
 [%autowidth.spread]
-
+// tag::metadata-and-links[]
 Metadata
 |===
 | Name | Type | Description
@@ -62,6 +64,7 @@ Links
 | next | String | Link to next page
 | last | String | Link to last page
 |===
+// end::metadata-and-links[]
 [%header,cols="20s,20a,35a]
 
 Audit Cycle Sets
@@ -92,25 +95,8 @@ Retrieves a list of retailer branches.
 ==== Output
 [%autowidth.spread]
 
-Metadata
-|===
-| Name | Type | Description
-| page | Number | Current page number.
-| per_page | Number |  Number of results per page.
-| page_count | Number |  Total number of pages available.
-| total_count | Number | Total number of available results
-| links | Object | see below
-|===
+include::ref.adoc[tag=metadata-and-links]
 
-Links
-|===
-| Name | Type | Description
-| self | String | Link to current page number.
-| first | String |  Link to first page.
-| previous | String |  Link to previous page.
-| next | String | Link to next page
-| last | String | Link to last page
-|===
 [%header,cols="20s,20a,35a]
 
 Branches
@@ -119,7 +105,7 @@ Branches
 | Name | Type | Description
 | branch_name | String | Branch name
 | branch_code | String | Branch code
-| is_deleted | String | branch deletion status
+| is_deleted | Boolean | Branch deletion status
 |===
 
 [[get-districts]]
@@ -141,25 +127,8 @@ Retrieves a list of region districts.
 ==== Output
 [%autowidth.spread]
 
-Metadata
-|===
-| Name | Type | Description
-| page | Number | Current page number.
-| per_page | Number |  Number of results per page.
-| page_count | Number |  Total number of pages available.
-| total_count | Number | Total number of available results
-| links | Object | see below
-|===
+include::ref.adoc[tag=metadata-and-links]
 
-Links
-|===
-| Name | Type | Description
-| self | String | Link to current page number.
-| first | String |  Link to first page.
-| previous | String |  Link to previous page.
-| next | String | Link to next page
-| last | String | Link to last page
-|===
 [%header,cols="20s,20a,35a]
 
 Districts
@@ -168,7 +137,7 @@ Districts
 | Name | Type | Description
 | district_name | String | District name
 | district_code | String | District code
-| is_deleted | String | branch deletion status
+| is_deleted | Boolean | Branch deletion status
 |===
 
 [[get-planograms]]
@@ -190,25 +159,8 @@ Retrieves a list of shelf planograms.
 ==== Output
 [%autowidth.spread]
 
-Metadata
-|===
-| Name | Type | Description
-| page | Number | Current page number.
-| per_page | Number |  Number of results per page.
-| page_count | Number |  Total number of pages available.
-| total_count | Number | Total number of available results
-| links | Object | see below
-|===
+include::ref.adoc[tag=metadata-and-links]
 
-Links
-|===
-| Name | Type | Description
-| self | String | Link to current page number.
-| first | String |  Link to first page.
-| previous | String |  Link to previous page.
-| next | String | Link to next page
-| last | String | Link to last page
-|===
 [%header,cols="20s,20a,35a]
 
 Planograms
@@ -244,25 +196,8 @@ Retrieves a list of project products.
 ==== Output
 [%autowidth.spread]
 
-Metadata
-|===
-| Name | Type | Description
-| page | Number | Current page number.
-| per_page | Number |  Number of results per page.
-| page_count | Number |  Total number of pages available.
-| total_count | Number | Total number of available results
-| links | Object | see below
-|===
+include::ref.adoc[tag=metadata-and-links]
 
-Links
-|===
-| Name | Type | Description
-| self | String | Link to current page number.
-| first | String |  Link to first page.
-| previous | String |  Link to previous page.
-| next | String | Link to next page
-| last | String | Link to last page
-|===
 [%header,cols="20s,20a,35a]
 
 Products
@@ -272,6 +207,7 @@ Products
 | pk | Number | Product identifier
 | alt_code | String | The product's alt code
 | product_name | String | Product name
+| product_type | String | Product type
 | product_uuid | String | Unique product identifier
 | product_local_name | String | Unique product name in the project's local language
 | product_short_name | String | Product's abbreviated name to be displayed in Trax reports/websites.
@@ -279,6 +215,7 @@ Products
 | product_client_code	| String | The product's EAN or UPC code
 | brand_name | String | Unique brand name related to the product
 | brand_local_name | String | Unique brand name related to the product in the project's local language
+| brand_code | String | Unique brand code related to the product
 | manufacturer_name | String | Unique manufacturer name related to the brand
 | manufacturer_local_name| String | Unique manufacturer name related to the brand in the project's local language
 | is_deleted| Boolean | Product deletion status
@@ -287,16 +224,37 @@ Products
 | category_local_name | String | Unique category name related to the product in the project's local language
 | subcategory_name | String | Unique subcategory name related to the product
 | subcategory_local_name | String | Unique subcategory name related to the product in the project's local language
+| substitution_product_lead | String | Trax product uuid of the substitution lead product
 | container_type | Number | The product's container type
 | size| String | The product size
 | unit_measurement | String | The product's size measurements
 | number_of_subpackages	| Number | The product's number of subpackages
 | units	| Number | The product's number of units
 | discovered_by_brand_watch	| Boolean | Indicates whether the product has been discovered by Trax Brand Watch
-| substitution_product_lead	| String | Trax product uuid of the substitution lead product
+| category_attribute_1| String | Custom attribute 1
+| category_attribute_2| String | Custom attribute 2
+| category_attribute_3| String | Custom attribute 3
+| width| String | Product Width
+| height| String | Product Height
 | images | Object | A list of product images & their face count
 | product_additional_attributes | Object | A list of product attributes
-| alternative_designs| Object | A list of the product's alternative designs
+| alternative_designs | Array<<<alternative_designs, alternative designs>>> | A list of alternative product designs
+|===
+
+Alternative Designs [[alternative_designs]]
+[%header,cols="20s,20a,35a]
+|===
+|Name|Type|Description
+|alternative_design_name| String | Name of the alternative product design
+|start_date| Date | Start date for the validity of the design
+|images| Array<<<product_image, Image>>> | see below
+|===
+
+Images [[product_images]]
+|===
+|Name|Type|Descriptionl
+|image_url| String | Image UR
+|direction| String | Product facing direction
 |===
 
 
@@ -304,7 +262,7 @@ Products
 === Get Routes
 `<trax-api-connector-mule-4:entity-controller-get-routes>`
 
-Retrieves a list of country regions.
+Retrieves a list of project routes.
 
 ==== Parameters
 [%header,cols="20s,20a,35a,20a,5a"]
@@ -319,28 +277,11 @@ Retrieves a list of country regions.
 ==== Output
 [%autowidth.spread]
 
-Metadata
-|===
-| Name | Type | Description
-| page | Number | Current page number.
-| per_page | Number |  Number of results per page.
-| page_count | Number |  Total number of pages available.
-| total_count | Number | Total number of available results
-| links | Object | see below
-|===
+include::ref.adoc[tag=metadata-and-links]
 
-Links
-|===
-| Name | Type | Description
-| self | String | Link to current page number.
-| first | String |  Link to first page.
-| previous | String |  Link to previous page.
-| next | String | Link to next page
-| last | String | Link to last page
-|===
 [%header,cols="20s,20a,35a]
 
-Regions
+Routes
 
 |===
 | Name | Type | Description
@@ -377,25 +318,8 @@ Retrieves a list of country states.
 ==== Output
 [%autowidth.spread]
 
-Metadata
-|===
-| Name | Type | Description
-| page | Number | Current page number.
-| per_page | Number |  Number of results per page.
-| page_count | Number |  Total number of pages available.
-| total_count | Number | Total number of available results
-| links | Object | see below
-|===
+include::ref.adoc[tag=metadata-and-links]
 
-Links
-|===
-| Name | Type | Description
-| self | String | Link to current page number.
-| first | String |  Link to first page.
-| previous | String |  Link to previous page.
-| next | String | Link to next page
-| last | String | Link to last page
-|===
 [%header,cols="20s,20a,35a]
 
 States
@@ -427,33 +351,19 @@ Retrieves a list of store types.
 ==== Output
 [%autowidth.spread]
 
-Metadata
-|===
-| Name | Type | Description
-| page | Number | Current page number.
-| per_page | Number |  Number of results per page.
-| page_count | Number |  Total number of pages available.
-| total_count | Number | Total number of available results
-| links | Object | see below
-|===
+include::ref.adoc[tag=metadata-and-links]
 
-Links
-|===
-| Name | Type | Description
-| self | String | Link to current page number.
-| first | String |  Link to first page.
-| previous | String |  Link to previous page.
-| next | String | Link to next page
-| last | String | Link to last page
-|===
 [%header,cols="20s,20a,35a]
 
-States
+Store Types
 
 |===
 | Name | Type | Description
 | store_type_name | String | Store Type name
 (Store Type names that have been configured in coordination with Trax implementation team)
+| store_type_code | String | Store Type code
+(Store Type codes that have been configured in coordination with Trax implementation team)
+|is_deleted | Boolean | was the store type deleted
 |===
 
 [[get-stores]]
@@ -475,25 +385,8 @@ Retrieves a list of stores.
 ==== Output
 [%autowidth.spread]
 
-Metadata
-|===
-| Name | Type | Description
-| page | Number | Current page number.
-| per_page | Number |  Number of results per page.
-| page_count | Number |  Total number of pages available.
-| total_count | Number | Total number of available results
-| links | Object | see below
-|===
+include::ref.adoc[tag=metadata-and-links]
 
-Links
-|===
-| Name | Type | Description
-| self | String | Link to current page number.
-| first | String |  Link to first page.
-| previous | String |  Link to previous page.
-| next | String | Link to next page
-| last | String | Link to last page
-|===
 [%header,cols="20s,20a,35a]
 
 Stores
@@ -513,29 +406,35 @@ Stores
 (Branches that have been configured in coordination with Trax implementation team)
 | retailer_name | String | Retailer Name
 (Retailers that have been configured in coordination with Trax implementation team)
+| state_name | String | Retailer Name
+(States that have been configured in coordination with Trax implementation team)
 | state_code | String | ISO code for a state or province
 (State codes that have been configured in coordination with Trax implementation team)
 | street | String | Address street info
 | city | String | Address info
+| address_line_2 | String | Address info
 | postal_code | String | Address info
 | latitude | Number(Float) | GPS latitude coordinate (in degrees)
 | longitude | Number(Float) | GPS longitude coordinate (in degrees)
+| audit_cycle_set | String | Audit cycle set name that the store is assigned to
 | is_active | Boolean | Indicates whether the store is active or has been deactivated
 | manager_name | String | Name of the store's manager (or another contact person for the store)
 | manager_email | String | Email of the store's manager
 | manager_phone | String |Phone number of the store's manager
 | last_update_time | Number (Epoch Unix Timestamp) |The store's last update time in Epoch Unix Time timestamp
-|additional_attributes | Object | In addition to the attributes above, it is possible to add additional attributes for stores
-(currently, Trax supports up to 30 name-value pairs)
+| store_additional_attributes | Object | In addition to the attributes above, it is possible to add additional attributes for stores
+(currently, Trax supports up to 45 name-value pairs)
+| is_deleted | Boolean | Was the store deleted
 |===
 
 Additional Attributes
-In addition to the attributes above, it is possible to add additional attributes for stores (currently, Trax supports up to 30 name-value pairs).
+
+In addition to the attributes above, it is possible to add additional attributes for stores (currently, Trax supports up to 45 name-value pairs).
 [%header, cols="20s,20a, 35a"]
 |===
 | Name | Type | Description
 | <key> | String | Attribute name as coordinated with Trax implementation
-Currently limited to 'additional_attribute_n' where n is 1-30.
+Currently limited to 'additional_attribute_n' where n is 1-45.
 The values will correspond to additional_attribute_n.
 e.g. additional_attribute_1
 | <value> | String | Attribute name as coordinated with Trax implementation
@@ -560,25 +459,8 @@ Retrieves a list of Tasks.
 ==== Output
 [%autowidth.spread]
 
-Metadata
-|===
-| Name | Type | Description
-| page | Number | Current page number.
-| per_page | Number |  Number of results per page.
-| page_count | Number |  Total number of pages available.
-| total_count | Number | Total number of available results
-| links | Object | see below
-|===
+include::ref.adoc[tag=metadata-and-links]
 
-Links
-|===
-| Name | Type | Description
-| self | String | Link to current page number.
-| first | String |  Link to first page.
-| previous | String |  Link to previous page.
-| next | String | Link to next page
-| last | String | Link to last page
-|===
 [%header,cols="20s,20a,35a]
 
 Tasks
@@ -591,6 +473,10 @@ Tasks
 (Task codes that have been configured in coordination with Trax implementation team)
 | task_uuid | String | Unique identifier for the task
 | template_group | String |The template's template group.
+| additional_attribute_1 | String | Custom attribute 1
+| additional_attribute_2 | String |Custom attribute 2.
+| additional_attribute_3 | String | Custom attribute 3.
+| additional_attribute_4 | String | Custom attribute 4.
 | fixture | String |A type of display in the store such as a cooler, main shelf, or secondary display.
 
 
@@ -615,25 +501,8 @@ Retrieves a list of users.
 ==== Output
 [%autowidth.spread]
 
-Metadata
-|===
-| Name | Type | Description
-| page | Number | Current page number.
-| per_page | Number |  Number of results per page.
-| page_count | Number |  Total number of pages available.
-| total_count | Number | Total number of available results
-| links | Object | see below
-|===
+include::ref.adoc[tag=metadata-and-links]
 
-Links
-|===
-| Name | Type | Description
-| self | String | Link to current page number.
-| first | String |  Link to first page.
-| previous | String |  Link to previous page.
-| next | String | Link to next page
-| last | String | Link to last page
-|===
 [%header,cols="20s,20a,35a]
 
 Tasks
