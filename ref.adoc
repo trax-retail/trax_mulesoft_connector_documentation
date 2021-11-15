@@ -95,8 +95,25 @@ Retrieves a list of retailer branches
 ==== Output
 [%autowidth.spread]
 
-include::ref.adoc[tag=metadata-and-links]
+Metadata
+|===
+| Name | Type | Description
+| page | Number | Current page number
+| per_page | Number |  Number of results per page
+| page_count | Number |  Total number of pages available
+| total_count | Number | Total number of available results
+| links | Object | See below
+|===
 
+Links
+|===
+| Name | Type | Description
+| self | String | Link to current page number
+| first | String |  Link to first page
+| previous | String |  Link to previous page
+| next | String | Link to next page
+| last | String | Link to last page
+|===
 [%header,cols="20s,20a,35a]
 
 Branches
@@ -127,8 +144,25 @@ Retrieves a list of region districts
 ==== Output
 [%autowidth.spread]
 
-include::ref.adoc[tag=metadata-and-links]
+Metadata
+|===
+| Name | Type | Description
+| page | Number | Current page number
+| per_page | Number |  Number of results per page
+| page_count | Number |  Total number of pages available
+| total_count | Number | Total number of available results
+| links | Object | See below
+|===
 
+Links
+|===
+| Name | Type | Description
+| self | String | Link to current page number
+| first | String |  Link to first page
+| previous | String |  Link to previous page
+| next | String | Link to next page
+| last | String | Link to last page
+|===
 [%header,cols="20s,20a,35a]
 
 Districts
@@ -159,8 +193,25 @@ Retrieves a list of shelf planograms
 ==== Output
 [%autowidth.spread]
 
-include::ref.adoc[tag=metadata-and-links]
+Metadata
+|===
+| Name | Type | Description
+| page | Number | Current page number
+| per_page | Number |  Number of results per page
+| page_count | Number |  Total number of pages available
+| total_count | Number | Total number of available results
+| links | Object | See below
+|===
 
+Links
+|===
+| Name | Type | Description
+| self | String | Link to current page number
+| first | String |  Link to first page
+| previous | String |  Link to previous page
+| next | String | Link to next page
+| last | String | Link to last page
+|===
 [%header,cols="20s,20a,35a]
 
 Planograms
@@ -196,8 +247,25 @@ Retrieves a list of project products
 ==== Output
 [%autowidth.spread]
 
-include::ref.adoc[tag=metadata-and-links]
+Metadata
+|===
+| Name | Type | Description
+| page | Number | Current page number
+| per_page | Number |  Number of results per page
+| page_count | Number |  Total number of pages available
+| total_count | Number | Total number of available results
+| links | Object | See below
+|===
 
+Links
+|===
+| Name | Type | Description
+| self | String | Link to current page number
+| first | String |  Link to first page
+| previous | String |  Link to previous page
+| next | String | Link to next page
+| last | String | Link to last page
+|===
 [%header,cols="20s,20a,35a]
 
 Products
@@ -247,7 +315,7 @@ Alternative Designs [[alternative_designs]]
 |Name|Type|Description
 |alternative_design_name| String | Name of the alternative product design
 |start_date| Date | Start date for the validity of the design
-|images| Array<<<product_image, Image>>> | See below
+|images| Array<<<product_images, Image>>> | See below
 |===
 
 Images [[product_images]]
@@ -277,8 +345,25 @@ Retrieves a list of project routes
 ==== Output
 [%autowidth.spread]
 
-include::ref.adoc[tag=metadata-and-links]
+Metadata
+|===
+| Name | Type | Description
+| page | Number | Current page number
+| per_page | Number |  Number of results per page
+| page_count | Number |  Total number of pages available
+| total_count | Number | Total number of available results
+| links | Object | See below
+|===
 
+Links
+|===
+| Name | Type | Description
+| self | String | Link to current page number
+| first | String |  Link to first page
+| previous | String |  Link to previous page
+| next | String | Link to next page
+| last | String | Link to last page
+|===
 [%header,cols="20s,20a,35a]
 
 Routes
@@ -318,8 +403,25 @@ Retrieves a list of country states
 ==== Output
 [%autowidth.spread]
 
-include::ref.adoc[tag=metadata-and-links]
+Metadata
+|===
+| Name | Type | Description
+| page | Number | Current page number
+| per_page | Number |  Number of results per page
+| page_count | Number |  Total number of pages available
+| total_count | Number | Total number of available results
+| links | Object | See below
+|===
 
+Links
+|===
+| Name | Type | Description
+| self | String | Link to current page number
+| first | String |  Link to first page
+| previous | String |  Link to previous page
+| next | String | Link to next page
+| last | String | Link to last page
+|===
 [%header,cols="20s,20a,35a]
 
 States
@@ -351,8 +453,25 @@ Retrieves a list of store types
 ==== Output
 [%autowidth.spread]
 
-include::ref.adoc[tag=metadata-and-links]
+Metadata
+|===
+| Name | Type | Description
+| page | Number | Current page number
+| per_page | Number |  Number of results per page
+| page_count | Number |  Total number of pages available
+| total_count | Number | Total number of available results
+| links | Object | See below
+|===
 
+Links
+|===
+| Name | Type | Description
+| self | String | Link to current page number
+| first | String |  Link to first page
+| previous | String |  Link to previous page
+| next | String | Link to next page
+| last | String | Link to last page
+|===
 [%header,cols="20s,20a,35a]
 
 Store Types
@@ -385,8 +504,25 @@ Retrieves a list of stores
 ==== Output
 [%autowidth.spread]
 
-include::ref.adoc[tag=metadata-and-links]
+Metadata
+|===
+| Name | Type | Description
+| page | Number | Current page number
+| per_page | Number |  Number of results per page
+| page_count | Number |  Total number of pages available
+| total_count | Number | Total number of available results
+| links | Object | See below
+|===
 
+Links
+|===
+| Name | Type | Description
+| self | String | Link to current page number
+| first | String |  Link to first page
+| previous | String |  Link to previous page
+| next | String | Link to next page
+| last | String | Link to last page
+|===
 [%header,cols="20s,20a,35a]
 
 Stores
@@ -459,8 +595,25 @@ Retrieves a list of Tasks
 ==== Output
 [%autowidth.spread]
 
-include::ref.adoc[tag=metadata-and-links]
+Metadata
+|===
+| Name | Type | Description
+| page | Number | Current page number
+| per_page | Number |  Number of results per page
+| page_count | Number |  Total number of pages available
+| total_count | Number | Total number of available results
+| links | Object | See below
+|===
 
+Links
+|===
+| Name | Type | Description
+| self | String | Link to current page number
+| first | String |  Link to first page
+| previous | String |  Link to previous page
+| next | String | Link to next page
+| last | String | Link to last page
+|===
 [%header,cols="20s,20a,35a]
 
 Tasks
@@ -501,8 +654,25 @@ Retrieves a list of users
 ==== Output
 [%autowidth.spread]
 
-include::ref.adoc[tag=metadata-and-links]
+Metadata
+|===
+| Name | Type | Description
+| page | Number | Current page number
+| per_page | Number |  Number of results per page
+| page_count | Number |  Total number of pages available
+| total_count | Number | Total number of available results
+| links | Object | See below
+|===
 
+Links
+|===
+| Name | Type | Description
+| self | String | Link to current page number
+| first | String |  Link to first page
+| previous | String |  Link to previous page
+| next | String | Link to next page
+| last | String | Link to last page
+|===
 [%header,cols="20s,20a,35a]
 
 Tasks
