@@ -16,11 +16,11 @@ Default configuration for Integrating with the Trax API.
 [%header,cols="20s,20a,20a,20a,20a,25a"]
 |===
 | Name | Type | Description | Default Value | Required | Example
-|Name | String | The name for this configuration. Connectors reference the configuration with this name. | | x | "Trax API connector configuration"
+|Name | String | The name for this configuration, connectors reference the configuration with this name | | x | "Trax API connector configuration"
 | Base Uri | String
-| The Base URI for the Trax Api. | | x | One of:
-** https://services.traxretail.com
-** https://gservices.traxretail.com
+| The Base URI for the Trax API | | x | Either:
+"** https://services.traxretail.com " or
+"** https://gservices.traxretail.com "
 | Authorization | String |  The API access key used for server authorization prefixed with "Auth-Token" |  | x | Auth-Token 2Duv6qwtZAVtaltC7lG2ZarFEMO3tVblWGk3HMwsMMb2axdCzxsd6zk9w7D8ng6JR7t0e0z8cri2
 |===
 
@@ -30,15 +30,15 @@ Default configuration for Integrating with the Trax API.
 === Get Audit Cycle Sets
 `<trax-api-connector-mule-4:entity-controller-get-audit-cycle-sets>`
 
-Retrieves a list of Audit cycle sets.
+Retrieves a list of Audit cycle sets
 
 ==== Parameters
 [%header,cols="20s,20a,35a,20a,5a"]
 |===
 | Name | Type | Description | Default Value | Required
-| Configuration | String | The name of the configuration to use. | | x
-| Project Name | String |  Name of the project to run against. |  | x
-| Page | Number |  Page number to retrieve for pagination purposes. |  |
+| Configuration | String | The name of the configuration to use | | x
+| Project Name | String |  Name of the project to run against |  | x
+| Page | Number |  Page number to retrieve for pagination purposes |  |
 | Per Page | Number | Number of results to return per page |  |
 |===
 
@@ -48,19 +48,19 @@ Retrieves a list of Audit cycle sets.
 Metadata
 |===
 | Name | Type | Description
-| page | Number | Current page number.
-| per_page | Number |  Number of results per page.
-| page_count | Number |  Total number of pages available.
+| page | Number | Current page number
+| per_page | Number |  Number of results per page
+| page_count | Number |  Total number of pages available
 | total_count | Number | Total number of available results
-| links | Object | see below
+| links | Object | See below
 |===
 
 Links
 |===
 | Name | Type | Description
-| self | String | Link to current page number.
-| first | String |  Link to first page.
-| previous | String |  Link to previous page.
+| self | String | Link to current page number
+| first | String |  Link to first page
+| previous | String |  Link to previous page
 | next | String | Link to next page
 | last | String | Link to last page
 |===
@@ -71,7 +71,7 @@ Audit Cycle Sets
 
 |===
 | Name | Type | Description
-|pk | number | Audit Cycle Set identifier.
+|pk | number | Audit Cycle Set identifier
 | name | String | Audit Cycle Set name
 |===
 
@@ -80,15 +80,15 @@ Audit Cycle Sets
 === Get Branches
 `<trax-api-connector-mule-4:entity-controller-get-branches>`
 
-Retrieves a list of retailer branches.
+Retrieves a list of retailer branches
 
 ==== Parameters
 [%header,cols="20s,20a,35a,20a,5a"]
 |===
 | Name | Type | Description | Default Value | Required
-| Configuration | String | The name of the configuration to use. | | x
-| Project Name | String |  Name of the project to run against. |  | x
-| Page | Number |  Page number to retrieve for pagination purposes. |  |
+| Configuration | String | The name of the configuration to use | | x
+| Project Name | String |  Name of the project to run against |  | x
+| Page | Number |  Page number to retrieve for pagination purposes |  |
 | Per Page | Number | Number of results to return per page |  |
 |===
 
@@ -112,15 +112,15 @@ Branches
 === Get Districts
 `<trax-api-connector-mule-4:entity-controller-get-districts>`
 
-Retrieves a list of region districts.
+Retrieves a list of region districts
 
 ==== Parameters
 [%header,cols="20s,20a,35a,20a,5a"]
 |===
 | Name | Type | Description | Default Value | Required
-| Configuration | String | The name of the configuration to use. | | x
-| Project Name | String |  Name of the project to run against. |  | x
-| Page | Number |  Page number to retrieve for pagination purposes. |  |
+| Configuration | String | The name of the configuration to use | | x
+| Project Name | String |  Name of the project to run against |  | x
+| Page | Number |  Page number to retrieve for pagination purposes |  |
 | Per Page | Number | Number of results to return per page |  |
 |===
 
@@ -144,15 +144,15 @@ Districts
 === Get Planograms
 `<trax-api-connector-mule-4:entity-controller-get-planograms>`
 
-Retrieves a list of shelf planograms.
+Retrieves a list of shelf planograms
 
 ==== Parameters
 [%header,cols="20s,20a,35a,20a,5a"]
 |===
 | Name | Type | Description | Default Value | Required
-| Configuration | String | The name of the configuration to use. | | x
-| Project Name | String |  Name of the project to run against. |  | x
-| Page | Number |  Page number to retrieve for pagination purposes. |  |
+| Configuration | String | The name of the configuration to use | | x
+| Project Name | String |  Name of the project to run against |  | x
+| Page | Number |  Page number to retrieve for pagination purposes |  |
 | Per Page | Number | Number of results to return per page |  |
 |===
 
@@ -167,11 +167,11 @@ Planograms
 
 |===
 | Name | Type | Description
-| planogram_image_url | String | Image url for the planogram
-| planogram_id | number | Planogram Identifier
+| planogram_image_url | String | Image URL for the planogram
+| planogram_id | Number | Planogram Identifier
 | name | String | Planogram Name
 | valid_from | String | Planogram valid from date
-| valid_to | String | Planogram Valid to date
+| valid_to | String | Planogram valid to date
 | last_modified | String | Last modification date
 | planogram_code | String | Unique planogram identifier
 | planogram_status | String | Planogram activation status
@@ -181,7 +181,7 @@ Planograms
 === Get Products
 `<trax-api-connector-mule-4:entity-controller-get-products>`
 
-Retrieves a list of project products.
+Retrieves a list of project products
 
 ==== Parameters
 [%header,cols="20s,20a,35a,20a,5a"]
@@ -210,8 +210,8 @@ Products
 | product_type | String | Product type
 | product_uuid | String | Unique product identifier
 | product_local_name | String | Unique product name in the project's local language
-| product_short_name | String | Product's abbreviated name to be displayed in Trax reports/websites.
-| product_item_code | String | Client product code Provided by the Customer
+| product_short_name | String | Product's abbreviated name to be displayed in Trax reports/websites
+| product_item_code | String | Client product code provided by the Customer
 | product_client_code	| String | The product's EAN or UPC code
 | brand_name | String | Unique brand name related to the product
 | brand_local_name | String | Unique brand name related to the product in the project's local language
@@ -234,8 +234,8 @@ Products
 | category_attribute_1| String | Custom attribute 1
 | category_attribute_2| String | Custom attribute 2
 | category_attribute_3| String | Custom attribute 3
-| width| String | Product Width
-| height| String | Product Height
+| width| String | Product width
+| height| String | Product height
 | images | Object | A list of product images & their face count
 | product_additional_attributes | Object | A list of product attributes
 | alternative_designs | Array<<<alternative_designs, alternative designs>>> | A list of alternative product designs
@@ -247,13 +247,13 @@ Alternative Designs [[alternative_designs]]
 |Name|Type|Description
 |alternative_design_name| String | Name of the alternative product design
 |start_date| Date | Start date for the validity of the design
-|images| Array<<<product_image, Image>>> | see below
+|images| Array<<<product_image, Image>>> | See below
 |===
 
 Images [[product_images]]
 |===
 |Name|Type|Descriptionl
-|image_url| String | Image UR
+|image_url| String | Image URL
 |direction| String | Product facing direction
 |===
 
@@ -262,15 +262,15 @@ Images [[product_images]]
 === Get Routes
 `<trax-api-connector-mule-4:entity-controller-get-routes>`
 
-Retrieves a list of project routes.
+Retrieves a list of project routes
 
 ==== Parameters
 [%header,cols="20s,20a,35a,20a,5a"]
 |===
 | Name | Type | Description | Default Value | Required
-| Configuration | String | The name of the configuration to use. | | x
-| Project Name | String |  Name of the project to run against. |  | x
-| Page | Number |  Page number to retrieve for pagination purposes. |  |
+| Configuration | String | The name of the configuration to use | | x
+| Project Name | String |  Name of the project to run against |  | x
+| Page | Number |  Page number to retrieve for pagination purposes |  |
 | Per Page | Number | Number of results to return per page |  |
 |===
 
@@ -288,13 +288,13 @@ Routes
 | name| String | Name of the route
 | description | String | A short description
 | external_route_id| String | The client's Route unique identifier
-| entities| String | An Object of entities that is linked to the Route.
+| entities| String | An Object of entities that is linked to the route
 |===
 
 Entities
 |===
 | Name | Type | Description
-| stores| Array | List of store numbers Maximum 500 stores per route
+| stores| Array | List of store numbers maximum 500 stores per route
 | users | Array | List of users login name
 | cycles| Array | List of cycles linked to the route
 |===
@@ -303,15 +303,15 @@ Entities
 === Get States
 `<trax-api-connector-mule-4:entity-controller-get-states>`
 
-Retrieves a list of country states.
+Retrieves a list of country states
 
 ==== Parameters
 [%header,cols="20s,20a,35a,20a,5a"]
 |===
 | Name | Type | Description | Default Value | Required
-| Configuration | String | The name of the configuration to use. | | x
-| Project Name | String |  Name of the project to run against. |  | x
-| Page | Number |  Page number to retrieve for pagination purposes. |  |
+| Configuration | String | The name of the configuration to use | | x
+| Project Name | String |  Name of the project to run against |  | x
+| Page | Number |  Page number to retrieve for pagination purposes |  |
 | Per Page | Number | Number of results to return per page |  |
 |===
 
@@ -336,15 +336,15 @@ States
 === Get Store Types
 `<trax-api-connector-mule-4:entity-controller-get-store-types>`
 
-Retrieves a list of store types.
+Retrieves a list of store types
 
 ==== Parameters
 [%header,cols="20s,20a,35a,20a,5a"]
 |===
 | Name | Type | Description | Default Value | Required
-| Configuration | String | The name of the configuration to use. | | x
-| Project Name | String |  Name of the project to run against. |  | x
-| Page | Number |  Page number to retrieve for pagination purposes. |  |
+| Configuration | String | The name of the configuration to use | | x
+| Project Name | String |  Name of the project to run against |  | x
+| Page | Number |  Page number to retrieve for pagination purposes |  |
 | Per Page | Number | Number of results to return per page |  |
 |===
 
@@ -363,22 +363,22 @@ Store Types
 (Store Type names that have been configured in coordination with Trax implementation team)
 | store_type_code | String | Store Type code
 (Store Type codes that have been configured in coordination with Trax implementation team)
-|is_deleted | Boolean | was the store type deleted
+|is_deleted | Boolean | Was the store type deleted
 |===
 
 [[get-stores]]
 === Get Stores
 `<trax-api-connector-mule-4:entity-controller-get-stores>`
 
-Retrieves a list of stores.
+Retrieves a list of stores
 
 ==== Parameters
 [%header,cols="20s,20a,35a,20a,5a"]
 |===
 | Name | Type | Description | Default Value | Required
-| Configuration | String | The name of the configuration to use. | | x
-| Project Name | String |  Name of the project to run against. |  | x
-| Page | Number |  Page number to retrieve for pagination purposes. |  |
+| Configuration | String | The name of the configuration to use | | x
+| Project Name | String |  Name of the project to run against |  | x
+| Page | Number |  Page number to retrieve for pagination purposes |  |
 | Per Page | Number | Number of results to return per page |  |
 |===
 
@@ -395,7 +395,7 @@ Stores
 | Name | Type | Description
 | store_number | String | The client's store unique identifier
 | store_name | String | Name of the store
-| store_display_name | String | A display (short-version) name of the store for report use (for Trax output solutions).
+| store_display_name | String | A display (short-version) name of the store for report use (for Trax output solutions)
 | store_type_name | String | Store type
 (Store types that have been configured in coordination with Trax implementation team)
 | region_name | String | Region Name
@@ -406,7 +406,7 @@ Stores
 (Branches that have been configured in coordination with Trax implementation team)
 | retailer_name | String | Retailer Name
 (Retailers that have been configured in coordination with Trax implementation team)
-| state_name | String | Retailer Name
+| state_name | String | State Name
 (States that have been configured in coordination with Trax implementation team)
 | state_code | String | ISO code for a state or province
 (State codes that have been configured in coordination with Trax implementation team)
@@ -429,11 +429,11 @@ Stores
 
 Additional Attributes
 
-In addition to the attributes above, it is possible to add additional attributes for stores (currently, Trax supports up to 45 name-value pairs).
+In addition to the attributes above, it is possible to add additional attributes for stores (currently, Trax supports up to 45 name-value pairs)
 [%header, cols="20s,20a, 35a"]
 |===
 | Name | Type | Description
-| <key> | String | Attribute name as coordinated with Trax implementation
+| <key> | String | Attribute name as coordinated with Trax implementation.
 Currently limited to 'additional_attribute_n' where n is 1-45.
 The values will correspond to additional_attribute_n.
 e.g. additional_attribute_1
@@ -444,15 +444,15 @@ e.g. additional_attribute_1
 === Get Tasks
 `<trax-api-connector-mule-4:entity-controller-get-tasks>`
 
-Retrieves a list of Tasks.
+Retrieves a list of Tasks
 
 ==== Parameters
 [%header,cols="20s,20a,35a,20a,5a"]
 |===
 | Name | Type | Description | Default Value | Required
-| Configuration | String | The name of the configuration to use. | | x
-| Project Name | String |  Name of the project to run against. |  | x
-| Page | Number |  Page number to retrieve for pagination purposes. |  |
+| Configuration | String | The name of the configuration to use | | x
+| Project Name | String |  Name of the project to run against |  | x
+| Page | Number |  Page number to retrieve for pagination purposes |  |
 | Per Page | Number | Number of results to return per page |  |
 |===
 
@@ -472,12 +472,12 @@ Tasks
 | task_code | String | Task code
 (Task codes that have been configured in coordination with Trax implementation team)
 | task_uuid | String | Unique identifier for the task
-| template_group | String |The template's template group.
+| template_group | String |The template's template group
 | additional_attribute_1 | String | Custom attribute 1
-| additional_attribute_2 | String |Custom attribute 2.
-| additional_attribute_3 | String | Custom attribute 3.
-| additional_attribute_4 | String | Custom attribute 4.
-| fixture | String |A type of display in the store such as a cooler, main shelf, or secondary display.
+| additional_attribute_2 | String |Custom attribute 2
+| additional_attribute_3 | String | Custom attribute 3
+| additional_attribute_4 | String | Custom attribute 4
+| fixture | String |A type of display in the store such as a cooler, main shelf, or secondary display
 
 
 |===
@@ -486,15 +486,15 @@ Tasks
 === Get Users
 `<trax-api-connector-mule-4:entity-controller-get-users>`
 
-Retrieves a list of users.
+Retrieves a list of users
 
 ==== Parameters
 [%header,cols="20s,20a,35a,20a,5a"]
 |===
 | Name | Type | Description | Default Value | Required
-| Configuration | String | The name of the configuration to use. | | x
-| Project Name | String |  Name of the project to run against. |  | x
-| Page | Number |  Page number to retrieve for pagination purposes. |  |
+| Configuration | String | The name of the configuration to use | | x
+| Project Name | String |  Name of the project to run against |  | x
+| Page | Number |  Page number to retrieve for pagination purposes |  |
 | Per Page | Number | Number of results to return per page |  |
 |===
 
