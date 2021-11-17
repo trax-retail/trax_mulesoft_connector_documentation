@@ -4,7 +4,7 @@ Support Category: https://www.mulesoft.com/legal/versioning-back-support-policy#
 
 *Overview*
 
-The Trax Connector enables Salesforce customers to integrate shelf & merchandising data from Trax into their existing solutions.
+The Trax Connector enables Mulesoft customers to integrate shelf & merchandising data from Trax into their existing solutions.
 
 Trax connector enables you to connect to select endpoints of Trax’s APIs, and exposes endpoints for accessing Trax data.
 
